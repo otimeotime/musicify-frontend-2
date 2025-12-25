@@ -4,7 +4,7 @@ import { PlayerContext } from "./PlayerContext";
 
 export const PlaylistContext = createContext();
 
-const url = "https://musicify-backend-2.onrender.com/";
+const url = "https://musicify-backend-2.onrender.com";
 const PlaylistContextProvider = (props) => {
 
     const [currentPlaylist, setCurrentPlaylist] = useState(null);
