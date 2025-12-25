@@ -10,16 +10,18 @@ const App = () => {
 
     return (
         <div className='h-screen bg-black'>
-            {songsData.length !== 0 ? <>
-                <div className="h-[90%] flex">
-                    <Sidebar />
-                    <Display />
-                    {showQueue && <QueueSidebar />}
-                </div>
-                <Player />
-            </>
-            : null}
-        <audio ref={audioRef} src={track ? track.file : ""} preload='none'></audio>
+            {/* REMOVE the check {songsData.length !== 0 ? ... } around the layout */}
+            
+            <div className="h-[90%] flex">
+                <Sidebar />
+                <Display />
+                {showQueue && <QueueSidebar />}
+            </div>
+            
+            {/* ONLY put the check around the Player component */}
+            {songsData.length !== 0 && <Player />}
+            
+            <audio ref={audioRef} src={track ? track.file : ""} preload='none'></audio>
         </div>
     )
 }
