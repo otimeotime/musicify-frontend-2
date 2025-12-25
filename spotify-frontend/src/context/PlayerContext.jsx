@@ -4,7 +4,7 @@ import { fetchAndParseLRC } from "../utils/lrcParser";
 
 export const PlayerContext = createContext();
 
-const url = "https://musicify-backend-2.onrender.com/";
+const url = "https://musicify-backend-2.onrender.com";
 console.log("MY BACKEND URL IS:", url);
 const LOOP_MODE = {
     NO_LOOP: 0, // Song plays once, then stops
