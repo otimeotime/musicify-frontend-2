@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom styling for the volume slider thumb (for WebKit/Blink browsers like Chrome, Edge, Safari) */
+input[type="range"].volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default Sytles */
+  appearance: none; /* Remove default Sytles */
+  width: 6px;         /* Width of the thumb bar */
+  height: 16px;       /* Height of the thumb bar */
+  background: #22c55e; /* Green color (Tailwind's green-500: #22c55e) */
+  cursor: pointer;
+  border-radius: 3px; /* Slightly rounded edges for the bar */
+  margin-top: -6px;
+}
+
+/* Custom styling for the volume slider thumb (for Firefox) */
+input[type="range"].volume-slider::-moz-range-thumb {
+  width: 6px;         /* Width of the thumb bar */
+  height: 16px;       /* Height of the thumb bar */
+  background: #22c55e; /* Green color (Tailwind's green-500: #22c55e) */
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;       /* Remove default border in Firefox */
+}
